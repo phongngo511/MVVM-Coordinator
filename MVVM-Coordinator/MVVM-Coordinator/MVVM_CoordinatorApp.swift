@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import WeatherySwiftUI
 
 @main
 struct MVVM_CoordinatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WeatherFactory.makeWeeklyWeatherView()
         }
     }
 }

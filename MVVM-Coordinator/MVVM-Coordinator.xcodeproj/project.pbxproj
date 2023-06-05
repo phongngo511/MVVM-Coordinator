@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		DA9113F62A286BA300C981F1 /* MVVM_CoordinatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9113F52A286BA300C981F1 /* MVVM_CoordinatorApp.swift */; };
-		DA9113F82A286BA300C981F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9113F72A286BA300C981F1 /* ContentView.swift */; };
 		DA9113FA2A286BA700C981F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9113F92A286BA700C981F1 /* Assets.xcassets */; };
 		DA9113FE2A286BA700C981F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9113FD2A286BA700C981F1 /* Preview Assets.xcassets */; };
 		DA9114082A286BA700C981F1 /* MVVM_CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9114072A286BA700C981F1 /* MVVM_CoordinatorTests.swift */; };
 		DA9114122A286BA700C981F1 /* MVVM_CoordinatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9114112A286BA700C981F1 /* MVVM_CoordinatorUITests.swift */; };
 		DA9114142A286BA700C981F1 /* MVVM_CoordinatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9114132A286BA700C981F1 /* MVVM_CoordinatorUITestsLaunchTests.swift */; };
+		DA9850352A2D96CF0097D90B /* WeatheryKit in Frameworks */ = {isa = PBXBuildFile; productRef = DA9850342A2D96CF0097D90B /* WeatheryKit */; };
+		DA98503E2A2DA0EE0097D90B /* WeatherySwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = DA98503D2A2DA0EE0097D90B /* WeatherySwiftUI */; };
+		DA9850402A2DA0F10097D90B /* WeatheryUIKit in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = DA98503F2A2DA0F10097D90B /* WeatheryUIKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		DA9113F22A286BA300C981F1 /* MVVM-Coordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-Coordinator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9113F52A286BA300C981F1 /* MVVM_CoordinatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_CoordinatorApp.swift; sourceTree = "<group>"; };
-		DA9113F72A286BA300C981F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DA9113F92A286BA700C981F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA9113FB2A286BA700C981F1 /* MVVM_Coordinator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MVVM_Coordinator.entitlements; sourceTree = "<group>"; };
 		DA9113FD2A286BA700C981F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +46,13 @@
 		DA91140D2A286BA700C981F1 /* MVVM-CoordinatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-CoordinatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9114112A286BA700C981F1 /* MVVM_CoordinatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_CoordinatorUITests.swift; sourceTree = "<group>"; };
 		DA9114132A286BA700C981F1 /* MVVM_CoordinatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_CoordinatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DA9850322A2D7E9E0097D90B /* WeatheryKit */ = {isa = PBXFileReference; lastKnownFileType = text; path = WeatheryKit; sourceTree = SOURCE_ROOT; };
+		DA98503A2A2D9ADB0097D90B /* WeatherySwiftUI */ = {isa = PBXFileReference; lastKnownFileType = text; path = WeatherySwiftUI; sourceTree = SOURCE_ROOT; };
+		DA9850412A2DAE460097D90B /* WeatheryUIKit */ = {isa = PBXFileReference; lastKnownFileType = text; path = WeatheryUIKit; sourceTree = SOURCE_ROOT; };
+		DA9850432A2DB0080097D90B /* WeatheryUIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WeatheryUIKit; sourceTree = "<group>"; };
+		DA9850442A2DB0150097D90B /* WeatheryUIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WeatheryUIKit; sourceTree = "<group>"; };
+		DA9850452A2DB1B90097D90B /* WeatheryUIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WeatheryUIKit; sourceTree = "<group>"; };
+		DA9850462A2DB2170097D90B /* WeatheryUIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WeatheryUIKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9850352A2D96CF0097D90B /* WeatheryKit in Frameworks */,
+				DA9850402A2DA0F10097D90B /* WeatheryUIKit in Frameworks */,
+				DA98503E2A2DA0EE0097D90B /* WeatherySwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,10 +86,12 @@
 		DA9113E92A286BA300C981F1 = {
 			isa = PBXGroup;
 			children = (
+				DA9850422A2DB0080097D90B /* Packages */,
 				DA9113F42A286BA300C981F1 /* MVVM-Coordinator */,
 				DA9114062A286BA700C981F1 /* MVVM-CoordinatorTests */,
 				DA9114102A286BA700C981F1 /* MVVM-CoordinatorUITests */,
 				DA9113F32A286BA300C981F1 /* Products */,
+				DA9850332A2D96CF0097D90B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,9 +109,11 @@
 			isa = PBXGroup;
 			children = (
 				DA9113F52A286BA300C981F1 /* MVVM_CoordinatorApp.swift */,
-				DA9113F72A286BA300C981F1 /* ContentView.swift */,
 				DA9113F92A286BA700C981F1 /* Assets.xcassets */,
 				DA9113FB2A286BA700C981F1 /* MVVM_Coordinator.entitlements */,
+				DA98503A2A2D9ADB0097D90B /* WeatherySwiftUI */,
+				DA9850412A2DAE460097D90B /* WeatheryUIKit */,
+				DA9850322A2D7E9E0097D90B /* WeatheryKit */,
 				DA9113FC2A286BA700C981F1 /* Preview Content */,
 			);
 			path = "MVVM-Coordinator";
@@ -129,6 +144,24 @@
 			path = "MVVM-CoordinatorUITests";
 			sourceTree = "<group>";
 		};
+		DA9850332A2D96CF0097D90B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA9850422A2DB0080097D90B /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				DA9850432A2DB0080097D90B /* WeatheryUIKit */,
+				DA9850442A2DB0150097D90B /* WeatheryUIKit */,
+				DA9850452A2DB1B90097D90B /* WeatheryUIKit */,
+				DA9850462A2DB2170097D90B /* WeatheryUIKit */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +178,11 @@
 			dependencies = (
 			);
 			name = "MVVM-Coordinator";
+			packageProductDependencies = (
+				DA9850342A2D96CF0097D90B /* WeatheryKit */,
+				DA98503D2A2DA0EE0097D90B /* WeatherySwiftUI */,
+				DA98503F2A2DA0F10097D90B /* WeatheryUIKit */,
+			);
 			productName = "MVVM-Coordinator";
 			productReference = DA9113F22A286BA300C981F1 /* MVVM-Coordinator.app */;
 			productType = "com.apple.product-type.application";
@@ -259,7 +297,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA9113F82A286BA300C981F1 /* ContentView.swift in Sources */,
 				DA9113F62A286BA300C981F1 /* MVVM_CoordinatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +473,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -472,6 +511,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -604,6 +645,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA9850342A2D96CF0097D90B /* WeatheryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WeatheryKit;
+		};
+		DA98503D2A2DA0EE0097D90B /* WeatherySwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WeatherySwiftUI;
+		};
+		DA98503F2A2DA0F10097D90B /* WeatheryUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WeatheryUIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA9113EA2A286BA300C981F1 /* Project object */;
 }
