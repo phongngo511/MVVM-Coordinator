@@ -51,7 +51,7 @@ private extension WeatherService {
         static let scheme = "https"
         static let host = "api.openweathermap.org"
         static let path = "/data/2.5"
-        static let key = "44bcce13bee95e00eb2073c9d9d5973e"
+        static let key = "<your-key>"
         static let forecastPath = "/forecast"
         static let weatherPath = "/weather"
     }
