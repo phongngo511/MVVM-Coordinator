@@ -16,7 +16,7 @@ struct CurrentWeatherView: View {
     }
 
     var body: some View {
-        List {
+        Form {
             contentView()
         }
         .onAppear {
@@ -46,3 +46,17 @@ private extension CurrentWeatherView {
     }
 }
 
+#if DEBUG
+struct CurrentWeatherView_Previews: PreviewProvider {
+    static var previews: some View {
+        CurrentWeatherView(viewModel: createDummyViewModel())
+    }
+
+    static func createDummyViewModel() -> CurrentWeatherViewModel {
+        let viewModel = CurrentWeatherViewModel(city: "Sydney", weatherService: WeatherService())
+        let data = try! WeatheryDummyService.dummyCurrentWeatherResponse()
+        viewModel.dataSource = CurrentWeatherDataSourceViewModel(responseItem: data)
+        return viewModel
+    }
+}
+#endif

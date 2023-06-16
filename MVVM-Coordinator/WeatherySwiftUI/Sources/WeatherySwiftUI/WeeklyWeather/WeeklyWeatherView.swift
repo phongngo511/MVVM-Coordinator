@@ -17,7 +17,7 @@ struct WeeklyWeatherView: View {
 
     var body: some View {
         NavigationView {
-            List {
+            Form {
                 searchField
                 if viewModel.dataSource.isEmpty {
                     emptySectionView
@@ -27,20 +27,26 @@ struct WeeklyWeatherView: View {
                 }
             }
             .listStyle(.grouped)
-            .navigationBarTitle("Weather ⛅️")
+            .navigationBarTitle("Today's Weather")
         }
     }
 }
 
 private extension WeeklyWeatherView {
     var searchField: some View {
-        HStack(alignment: .center) {
-            TextField("e.g. Sydney", text: $viewModel.city)
+        Section("Search for City name") {
+            HStack(alignment: .center) {
+                TextField("e.g. Sydney", text: $viewModel.city)
+            }
         }
     }
 
     var forecastSectionView: some View {
-        Section {
+        Section("Forecast") {
+            HStack {
+                Image(systemName: "calendar")
+                Text("Weekdays' Forecast")
+            }
             ForEach(viewModel.dataSource) { dataSourceViewModel in
                 DailyWeatherRow(viewModel: dataSourceViewModel)
             }
@@ -48,11 +54,11 @@ private extension WeeklyWeatherView {
     }
 
     var cityHourlyWeatherSectionView: some View {
-        Section {
+        Section("Today's weather") {
             NavigationLink(destination: viewModel.currentWeatherView) {
                 VStack(alignment: .leading) {
                     Text(viewModel.city)
-                    Text("Weather today")
+                    Text("See more")
                         .font(.caption)
                         .foregroundColor(.gray)
                 }
@@ -74,3 +80,18 @@ extension WeeklyWeatherViewModel {
     }
 }
 
+#if DEBUG
+struct WeeklyWeatherView_Previews: PreviewProvider {
+    static var previews: some View {
+        WeeklyWeatherView(viewModel: createDummyViewModel())
+    }
+
+    static func createDummyViewModel() -> WeeklyWeatherViewModel {
+        let viewModel = WeeklyWeatherViewModel(weatherService: WeatherService())
+        let data: [DailyWeatherDataSourceViewModel] = try! WeatheryDummyService.dummyWeaklyWeatherResponse().compactMap { DailyWeatherDataSourceViewModel(reponseItem: $0)}
+        viewModel.city = "Sydney"
+        viewModel.dataSource = data
+        return viewModel
+    }
+}
+#endif

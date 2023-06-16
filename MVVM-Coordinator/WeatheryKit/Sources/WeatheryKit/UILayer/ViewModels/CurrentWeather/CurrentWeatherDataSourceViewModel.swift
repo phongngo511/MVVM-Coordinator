@@ -10,7 +10,7 @@ import MapKit
 public struct CurrentWeatherDataSourceViewModel {
     private let responseItem: CurrentWeatherForecastResponse
 
-    init(responseItem: CurrentWeatherForecastResponse) {
+    public init(responseItem: CurrentWeatherForecastResponse) {
         self.responseItem = responseItem
     }
 

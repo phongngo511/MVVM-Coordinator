@@ -37,3 +37,12 @@ struct DailyWeatherRow: View {
         }
     }
 }
+
+#if DEBUG
+struct DailyWeatherRow_Previews: PreviewProvider {
+    static var previews: some View {
+        let viewModel = DailyWeatherDataSourceViewModel(reponseItem: try! WeatheryDummyService.dummyWeaklyWeatherResponse().first!)
+        DailyWeatherRow(viewModel: viewModel)
+    }
+}
+#endif
