@@ -12,7 +12,7 @@ protocol CoordinatorProtocol {
     func start() -> Self.Start
 }
 
-open class Coordinator<Router: NavigationRouter>: ObservableObject {
+public class Coordinator {
 
     weak var parent: Coordinator?
     private(set) var children: Set<Coordinator>
