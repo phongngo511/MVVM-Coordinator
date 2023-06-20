@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DA0038ED2A413E4F00D0C1E8 /* WeatheryUIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = WeatheryUIKit; path = ../../../../../.Trash/WeatheryUIKit; sourceTree = "<group>"; };
+		DA4E35D12A41414800C76737 /* WeatheryUIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = WeatheryUIKit; path = ../../../../.Trash/WeatheryUIKit; sourceTree = "<group>"; };
 		DA9113F22A286BA300C981F1 /* MVVM-Coordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-Coordinator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9113F52A286BA300C981F1 /* MVVM_CoordinatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_CoordinatorApp.swift; sourceTree = "<group>"; };
 		DA9113F92A286BA700C981F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 			children = (
 				DA98503A2A2D9ADB0097D90B /* WeatherySwiftUI */,
 				DA9850322A2D7E9E0097D90B /* WeatheryKit */,
-				DA0038ED2A413E4F00D0C1E8 /* WeatheryUIKit */,
+				DA4E35D12A41414800C76737 /* WeatheryUIKit */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
