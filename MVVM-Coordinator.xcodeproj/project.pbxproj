@@ -145,9 +145,9 @@
 		DA9850422A2DB0080097D90B /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				DA4E35D12A41414800C76737 /* WeatheryUIKit */,
 				DA98503A2A2D9ADB0097D90B /* WeatherySwiftUI */,
 				DA9850322A2D7E9E0097D90B /* WeatheryKit */,
-				DA4E35D12A41414800C76737 /* WeatheryUIKit */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
