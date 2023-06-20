@@ -10,10 +10,7 @@ import WeatheryKit
 
 struct WeeklyWeatherView: View {
     @ObservedObject var viewModel: WeeklyWeatherViewModel
-
-    init(viewModel: WeeklyWeatherViewModel) {
-        self.viewModel = viewModel
-    }
+    var coordinator: AppCoordinatorProtocol
 
     var body: some View {
         NavigationView {
@@ -55,7 +52,7 @@ private extension WeeklyWeatherView {
 
     var cityHourlyWeatherSectionView: some View {
         Section("Today's weather") {
-            NavigationLink(destination: viewModel.currentWeatherView) {
+            NavigationLink(destination: coordinator.showCurrentWeather(with: viewModel.city)) {
                 VStack(alignment: .leading) {
                     Text(viewModel.city)
                     Text("See more")
@@ -74,21 +71,15 @@ private extension WeeklyWeatherView {
     }
 }
 
-extension WeeklyWeatherViewModel {
-    var currentWeatherView: some View {
-        return WeatherFactory.makeCurrentWeatherView(forCity: city, weatherService: weatherService)
-    }
-}
-
 #if DEBUG
 struct WeeklyWeatherView_Previews: PreviewProvider {
     static var previews: some View {
-        WeeklyWeatherView(viewModel: createDummyViewModel())
+        WeeklyWeatherView(viewModel: createDummyViewModel(), coordinator: AppCoordinatorMock())
     }
 
     static func createDummyViewModel() -> WeeklyWeatherViewModel {
         let viewModel = WeeklyWeatherViewModel(weatherService: WeatherService())
-        let data: [DailyWeatherDataSourceViewModel] = try! WeatheryDummyService.dummyWeaklyWeatherResponse().compactMap { DailyWeatherDataSourceViewModel(reponseItem: $0)}
+        let data: [DailyWeatherDataSourceViewModel] = try! WeatheryServiceMock.weaklyWeatherResponseMock().compactMap { DailyWeatherDataSourceViewModel(reponseItem: $0)}
         viewModel.city = "Sydney"
         viewModel.dataSource = data
         return viewModel

@@ -10,9 +10,10 @@ import WeatherySwiftUI
 
 @main
 struct MVVM_CoordinatorApp: App {
+    let coordinator = AppCoordinator()
     var body: some Scene {
         WindowGroup {
-            WeatherFactory.makeWeeklyWeatherView()
+            coordinator.start()
         }
     }
 }

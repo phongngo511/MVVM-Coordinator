@@ -10,18 +10,14 @@ import WeatheryKit
 
 struct CurrentWeatherView: View {
     @ObservedObject var viewModel: CurrentWeatherViewModel
-
-    init(viewModel: CurrentWeatherViewModel) {
-        self.viewModel = viewModel
-    }
+    var coordinator: AppCoordinatorProtocol?
 
     var body: some View {
-        Form {
+        List {
             contentView()
         }
-        .onAppear {
-            viewModel.reloadWeather()
-        }
+        .onAppear(perform: viewModel.reloadWeather)
+        .onDisappear(perform: coordinator?.discardWeather)
         .listStyle(.grouped)
         .navigationBarTitle(viewModel.city)
     }
@@ -49,12 +45,12 @@ private extension CurrentWeatherView {
 #if DEBUG
 struct CurrentWeatherView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentWeatherView(viewModel: createDummyViewModel())
+        CurrentWeatherView(viewModel: createDummyViewModel(), coordinator: AppCoordinatorMock())
     }
 
     static func createDummyViewModel() -> CurrentWeatherViewModel {
         let viewModel = CurrentWeatherViewModel(city: "Sydney", weatherService: WeatherService())
-        let data = try! WeatheryDummyService.dummyCurrentWeatherResponse()
+        let data = try! WeatheryServiceMock.currentWeatherResponseMock()
         viewModel.dataSource = CurrentWeatherDataSourceViewModel(responseItem: data)
         return viewModel
     }

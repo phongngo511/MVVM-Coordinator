@@ -56,7 +56,7 @@ struct CurrentWeatherRow_Previews: PreviewProvider {
     }
 
     static func createDummyViewModel() -> CurrentWeatherDataSourceViewModel {
-        return CurrentWeatherDataSourceViewModel(responseItem: try! WeatheryDummyService.dummyCurrentWeatherResponse())
+        return CurrentWeatherDataSourceViewModel(responseItem: try! WeatheryServiceMock.currentWeatherResponseMock())
     }
 }
 #endif
