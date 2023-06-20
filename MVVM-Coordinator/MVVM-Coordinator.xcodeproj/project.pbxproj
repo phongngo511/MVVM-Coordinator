@@ -15,7 +15,6 @@
 		DA9114142A286BA700C981F1 /* MVVM_CoordinatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9114132A286BA700C981F1 /* MVVM_CoordinatorUITestsLaunchTests.swift */; };
 		DA9850352A2D96CF0097D90B /* WeatheryKit in Frameworks */ = {isa = PBXBuildFile; productRef = DA9850342A2D96CF0097D90B /* WeatheryKit */; };
 		DA98503E2A2DA0EE0097D90B /* WeatherySwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = DA98503D2A2DA0EE0097D90B /* WeatherySwiftUI */; };
-		DA9850402A2DA0F10097D90B /* WeatheryUIKit in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = DA98503F2A2DA0F10097D90B /* WeatheryUIKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA0038ED2A413E4F00D0C1E8 /* WeatheryUIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = WeatheryUIKit; path = ../../../../../.Trash/WeatheryUIKit; sourceTree = "<group>"; };
 		DA9113F22A286BA300C981F1 /* MVVM-Coordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-Coordinator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9113F52A286BA300C981F1 /* MVVM_CoordinatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_CoordinatorApp.swift; sourceTree = "<group>"; };
 		DA9113F92A286BA700C981F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,11 +48,6 @@
 		DA9114132A286BA700C981F1 /* MVVM_CoordinatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_CoordinatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DA9850322A2D7E9E0097D90B /* WeatheryKit */ = {isa = PBXFileReference; lastKnownFileType = text; path = WeatheryKit; sourceTree = SOURCE_ROOT; };
 		DA98503A2A2D9ADB0097D90B /* WeatherySwiftUI */ = {isa = PBXFileReference; lastKnownFileType = text; path = WeatherySwiftUI; sourceTree = SOURCE_ROOT; };
-		DA9850412A2DAE460097D90B /* WeatheryUIKit */ = {isa = PBXFileReference; lastKnownFileType = text; path = WeatheryUIKit; sourceTree = SOURCE_ROOT; };
-		DA9850432A2DB0080097D90B /* WeatheryUIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WeatheryUIKit; sourceTree = "<group>"; };
-		DA9850442A2DB0150097D90B /* WeatheryUIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WeatheryUIKit; sourceTree = "<group>"; };
-		DA9850452A2DB1B90097D90B /* WeatheryUIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WeatheryUIKit; sourceTree = "<group>"; };
-		DA9850462A2DB2170097D90B /* WeatheryUIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WeatheryUIKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +56,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA9850352A2D96CF0097D90B /* WeatheryKit in Frameworks */,
-				DA9850402A2DA0F10097D90B /* WeatheryUIKit in Frameworks */,
 				DA98503E2A2DA0EE0097D90B /* WeatherySwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,9 +105,6 @@
 				DA9113F52A286BA300C981F1 /* MVVM_CoordinatorApp.swift */,
 				DA9113F92A286BA700C981F1 /* Assets.xcassets */,
 				DA9113FB2A286BA700C981F1 /* MVVM_Coordinator.entitlements */,
-				DA98503A2A2D9ADB0097D90B /* WeatherySwiftUI */,
-				DA9850412A2DAE460097D90B /* WeatheryUIKit */,
-				DA9850322A2D7E9E0097D90B /* WeatheryKit */,
 				DA9113FC2A286BA700C981F1 /* Preview Content */,
 			);
 			path = "MVVM-Coordinator";
@@ -154,10 +145,9 @@
 		DA9850422A2DB0080097D90B /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				DA9850432A2DB0080097D90B /* WeatheryUIKit */,
-				DA9850442A2DB0150097D90B /* WeatheryUIKit */,
-				DA9850452A2DB1B90097D90B /* WeatheryUIKit */,
-				DA9850462A2DB2170097D90B /* WeatheryUIKit */,
+				DA98503A2A2D9ADB0097D90B /* WeatherySwiftUI */,
+				DA9850322A2D7E9E0097D90B /* WeatheryKit */,
+				DA0038ED2A413E4F00D0C1E8 /* WeatheryUIKit */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -181,7 +171,6 @@
 			packageProductDependencies = (
 				DA9850342A2D96CF0097D90B /* WeatheryKit */,
 				DA98503D2A2DA0EE0097D90B /* WeatherySwiftUI */,
-				DA98503F2A2DA0F10097D90B /* WeatheryUIKit */,
 			);
 			productName = "MVVM-Coordinator";
 			productReference = DA9113F22A286BA300C981F1 /* MVVM-Coordinator.app */;
@@ -654,10 +643,6 @@
 		DA98503D2A2DA0EE0097D90B /* WeatherySwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WeatherySwiftUI;
-		};
-		DA98503F2A2DA0F10097D90B /* WeatheryUIKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = WeatheryUIKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
